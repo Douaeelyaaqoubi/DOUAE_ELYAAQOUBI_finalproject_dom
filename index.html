@@ -5,10 +5,128 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Memory Game</title>
     <link rel="stylesheet" href="./public/css/app.css">
-    <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 </head>
 <body>
     
+    <!-- NAVBAR  -->
+    <header class="navbar">
+    <div class="nav-wrap">
+        <h1 class="logo">Yummy<span>.</span></h1>
+
+        <nav class="nav">
+        <a href="#home" class="active" style="color:#3d3d45;">Home</a>
+        <a href="#about" >About</a>
+        <a href="#menu">Menu</a>
+        <a href="#events">Events</a>
+        <a href="#chefs">Chefs</a>
+        <a href="#gallery">Gallery</a>
+
+        <div class="dropdown">
+            <span class="dropdown-toggle">
+                Dropdown 
+                <svg class="arrow" width="12" height="12" viewBox="0 0 24 24">
+                    <path d="M7 10l5 5 5-5H7z" fill="#7f7f90"/>
+                </svg>
+            </span>
+            <div class="dropdown-menu">
+                <a href="#">Drop 1</a>
+                <a href="#">Drop 2</a>
+                <a href="#">Drop 3</a>
+            </div>
+        </div>
+
+
+        <a href="#contact">Contact</a>
+        </nav>
+
+        <button id="bookBtn" class="btn-hero">Book a Table</button>
+    </div>
+    </header>
+
+
+    <!-- HOME -->
+    <section class="hero">
+    <div class="hero-left">
+        <h1>
+        Enjoy Your Healthy<br>
+        Delicious Food
+        </h1>
+
+        <p>
+            We are team of talented designers making websites with Bootstrap
+        </p>
+
+        <div class="hero-actions">
+        <button class="btn-main">Book a Table</button>
+
+        <button class="btn-video">
+            <span class="play">&#9658;</span>
+            Watch Video
+        </button>
+        </div>
+    </div>
+
+    <div class="hero-right">
+        <img src="./public/images/hero-img.png" alt="food">
+    </div>
+    </section>
+
+
+    <!-- Menu -->
+    <!-- <section id="menu" class="menu">
+        <h2>Our Menu</h2>
+        <div class="menu-grid">
+        <div class="menu-item">Pizza</div>
+        <div class="menu-item">Pasta</div>
+        <div class="menu-item">Salad</div>
+        </div>
+    </section> -->
+
+    <!-- Event
+    <section id="event" class="event">
+        <h2>Events</h2>
+        <p>Private & Birthday Parties</p>
+        <button class="btn video-btn" data-video="video2.mp4">Watch Event</button>
+    </section> -->
+
+    <!-- Booking Modal -->
+    <!-- <div class="modal" id="modal">
+        <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3>Book a Table</h3>
+
+        <form id="bookingForm">
+            <input type="text" placeholder="Full Name" required>
+
+            <select required>
+            <option value="">Choose Meal</option>
+            <option>Breakfast</option>
+            <option>Lunch</option>
+            <option>Dinner</option>
+            </select>
+
+            <input type="time" id="startTime" required>
+            <input type="time" id="endTime" required>
+
+            <input type="number" min="1" placeholder="Number of People" required>
+
+            <button type="submit" class="btn">Confirm</button>
+            <p class="error" id="error"></p>
+        </form>
+        </div>
+    </div> -->
+
+    <!-- Video Modal -->
+    <!-- <div class="modal" id="videoModal">
+        <div class="modal-content">
+        <span class="close-video">&times;</span>
+        <video controls id="videoPlayer"></video>
+        </div>
+    </div> -->
 
     <script src="./public/js/app.js"></script>
 </body>
