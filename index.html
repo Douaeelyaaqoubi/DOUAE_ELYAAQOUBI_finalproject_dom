@@ -78,65 +78,105 @@
 
     <!-- *ABOUT US -->
     <section class="about" id="about_us">
-    <div class="about-title">
+    
+        <div class="about-title">
         <p>ABOUT US</p>
         <h1>LEARN MORE <span>ABOUT US</span></h1>
     </div>
 
     <div class="about-content">
-
-        <!-- LEFT SIDE -->
         <div class="about-left">
-
-            <!-- CAROUSEL -->
                 <img src="./public/images/about/about.jpg" class="slide active" >
-            <!-- BOOK A TABLE -->
             <div class="book-box">
                 <p>Book a Table</p>
                 <span>+1 5589 55488 55</span>
             </div>
-
         </div>
-
-        <!-- RIGHT SIDE -->
         <div class="about-right">
-
             <p class="italic">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </p>
-
             <ul>
                 <li>Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
                 <li>Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
                 <li>DUllamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
             </ul>
-
             <p>
                 Ullamco laboris nisi ut aliquip ex Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident ea commodo consequat. Duis aute irure dolor in reprehenderit.
             </p>
-
-            <!-- VIDEO -->
             <div class="video-box">
                 <img src="./public/images/about/about-2.jpg" class="video-img active" alt="1">
-                <img src="./public/images/menu/menu-item-1.png" class="video-img" alt="2">
-                <img src="./public/images/menu/menu-item-2.png" class="video-img" alt="3">
-                <img src="./public/images/menu/menu-item-3.png" class="video-img" alt="4">
-                <img src="./public/images/menu/menu-item-4.png" class="video-img" alt="5">
-                <img src="./public/images/menu/menu-item-5.png" class="video-img" alt="6">
-                <img src="./public/images/menu/menu-item-6.png" class="video-img" alt="7">
-
-                <button class="play-btn">▶</button>
+                <button id="openCarousel" class="play-btn">▶</button>
+            <div class="carousel-container" id="carousel1">
+                <button id="closeCarousel">✖</button>
+                    <div class="slide">
+                        <img src="./public/images/menu/menu-item-1.png">
+                    </div>
+                    <div class="slide">
+                        <img src="./public/images/menu/menu-item-2.png">
+                    </div>
+                    <div class="slide">
+                        <img src="./public/images/menu/menu-item-3.png">
+                    </div>
+                    <div class="slide">
+                        <img src="./public/images/menu/menu-item-5.png">
+                    </div>
+                    <button carouselBtn="carousel1" class="previous">‹</button>
+                    <button carouselBtn="carousel1" class="next">›</button>
+                </div>
             </div>
-
-
-        </div>
-
     </div>
-
     </section>
 
+    <!-- WHY US-->
+        <section class="whyUs">
+            
+        <div class="container whyContent">
+            <div class="firstCard">
+                <h3>Why Choose Us</h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis
+                    aute irure dolor in reprehenderit Asperiores dolores sed et. Tenetur
+                    quia eos. Autem tempore quibusdam vel necessitatibus optio ad
+                    corporis.
+                </p>
+                <button>Learn More ></button>
+            </div>
+
+            <div class="secondCard">
+                <i class="fa-regular fa-clipboard"></i>
+                <h3>Corporis voluptates officia eiusmod</h3>
+                <p>
+                    Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris
+                    nisi ut aliquip
+                </p>
+            </div>
+
+            <div class="thirdCard">
+                <i class="fa-regular fa-gem"></i>
+                <h3>Corporis voluptates officia eiusmod</h3>
+                <p>
+                    Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris
+                    nisi ut aliquip
+                </p>
+            </div>
+
+            <div class="fourthCard">
+                <i  ="fa-solid fa-inbox"></i>
+                <h3>Corporis voluptates officia eiusmod</h3>
+                <p>
+                    Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris
+                    nisi ut aliquip
+                </p>
+            </div>
+
+        </div>
+        </section>
 
 
+
+    
 
 <!--  </div>
     <!-- <section id="menu" class="menu">
