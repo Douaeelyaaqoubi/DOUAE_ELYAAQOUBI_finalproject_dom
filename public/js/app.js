@@ -170,110 +170,110 @@ setInterval(() => {
 
 //* BOOK A TABLE
 
-// document.addEventListener("DOMContentLoaded", () => {
-    // const button = document.querySelector(".book-btn");
-    // const grid = document.querySelector(".GRID");
-    // if (!button || !grid) return;
+document.addEventListener("DOMContentLoaded", () => {
+    const button = document.querySelector(".book-btn");
+    const grid = document.querySelector(".GRID");
+    if (!button || !grid) return;
 
-    // const reservations = [];
+    const reservations = [];
 
-    // function isValidEmail(email) {
-    //     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-    // }
+    function isValidEmail(email) {
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    }
 
-    // function isValidPhone(phone) {
-    //     return /^\d+$/.test(phone);
-    // }
+    function isValidPhone(phone) {
+        return /^\d+$/.test(phone);
+    }
 
-    // function showError(input, message) {
-    //     clearError(input);
-    //     const error = document.createElement("div");
-    //     error.className = "input-error";
-    //     error.style.color = "red";
-    //     error.style.fontSize = "12px";
-    //     error.style.marginTop = "4px";
-    //     error.textContent = message;
-    //     input.parentNode.appendChild(error);
-    // }
+    function showError(input, message) {
+        clearError(input);
+        const error = document.createElement("div");
+        error.className = "input-error";
+        error.style.color = "red";
+        error.style.fontSize = "12px";
+        error.style.marginTop = "4px";
+        error.textContent = message;
+        input.parentNode.appendChild(error);
+    }
 
-    // function clearError(input) {
-    //     const parent = input.parentNode;
-    //     const error = parent.querySelector(".input-error");
-    //     if (error) parent.removeChild(error);
-    // }
+    function clearError(input) {
+        const parent = input.parentNode;
+        const error = parent.querySelector(".input-error");
+        if (error) parent.removeChild(error);
+    }
 
-    // function saveReservation() {
-    //     const inputs = grid.querySelectorAll("input");
-    //     const textarea = grid.querySelector("textarea");
+    function saveReservation() {
+        const inputs = grid.querySelectorAll("input");
+        const textarea = grid.querySelector("textarea");
 
-    //     let valid = true;
+        let valid = true;
 
-    //     const name = inputs[0];
-    //     const email = inputs[1];
-    //     const phone = inputs[2];
-    //     const date = inputs[3];
-    //     const time = inputs[4];
-    //     const people = inputs[5];
-    //     const message = textarea;
+        const name = inputs[0];
+        const email = inputs[1];
+        const phone = inputs[2];
+        const date = inputs[3];
+        const time = inputs[4];
+        const people = inputs[5];
+        const message = textarea;
 
-    //     [...inputs, textarea].forEach(clearError);
+        [...inputs, textarea].forEach(clearError);
 
-    //     if (!name.value.trim()) {
-    //     showError(name, "Name is required");
-    //     valid = false;
-    //     }
+        if (!name.value.trim()) {
+        showError(name, "Name is required");
+        valid = false;
+        }
 
-    //     if (!email.value.trim()) {
-    //     showError(email, "Email is required");
-    //     valid = false;
-    //     } else if (!isValidEmail(email.value.trim())) {
-    //     showError(email, "Invalid email address");
-    //     valid = false;
-    //     }
+        if (!email.value.trim()) {
+        showError(email, "Email is required");
+        valid = false;
+        } else if (!isValidEmail(email.value.trim())) {
+        showError(email, "Invalid email address");
+        valid = false;
+        }
 
-    //     if (!phone.value.trim()) {
-    //     showError(phone, "Phone number is required");
-    //     valid = false;
-    //     } else if (!isValidPhone(phone.value.trim())) {
-    //     showError(phone, "Phone number must contain digits only");
-    //     valid = false;
-    //     }
+        if (!phone.value.trim()) {
+        showError(phone, "Phone number is required");
+        valid = false;
+        } else if (!isValidPhone(phone.value.trim())) {
+        showError(phone, "Phone number must contain digits only");
+        valid = false;
+        }
 
-    //     if (!date.value.trim()) {
-    //     showError(date, "Date is required");
-    //     valid = false;
-    //     }
+        if (!date.value.trim()) {
+        showError(date, "Date is required");
+        valid = false;
+        }
 
-    //     if (!time.value.trim()) {
-    //     showError(time, "Time is required");
-    //     valid = false;
-    //     }
+        if (!time.value.trim()) {
+        showError(time, "Time is required");
+        valid = false;
+        }
 
-    //     if (!people.value.trim()) {
-    //     showError(people, "Number of people is required");
-    //     valid = false;
-    //     } else if (isNaN(people.value.trim()) || Number(people.value.trim()) <= 0) {
-    //     showError(people, "Please enter a valid number of people");
-    //     valid = false;
-    //     }
+        if (!people.value.trim()) {
+        showError(people, "Number of people is required");
+        valid = false;
+        } else if (isNaN(people.value.trim()) || Number(people.value.trim()) <= 0) {
+        showError(people, "Please enter a valid number of people");
+        valid = false;
+        }
 
-    //     if (!valid) return;
+        if (!valid) return;
 
-    //     const data = {
-    //     name: name.value.trim(),
-    //     email: email.value.trim(),
-    //     phone: phone.value.trim(),
-    //     date: date.value.trim(),
-    //     time: time.value.trim(),
-    //     people: people.value.trim(),
-    //     message: message.value.trim()
-    //     };
+        const data = {
+        name: name.value.trim(),
+        email: email.value.trim(),
+        phone: phone.value.trim(),
+        date: date.value.trim(),
+        time: time.value.trim(),
+        people: people.value.trim(),
+        message: message.value.trim()
+        };
 
-    //     reservations.push(data);
-    //     console.log("Reservations:", reservations);
+        reservations.push(data);
+        console.log("Reservations:", reservations);
 
-    //     [...inputs, textarea].forEach(input => input.value = "");
-    // }
+        [...inputs, textarea].forEach(input => input.value = "");
+    }
 
-    // button.addEventListener("click", saveReservation);
-    // });
+    button.addEventListener("click", saveReservation);
+    });
