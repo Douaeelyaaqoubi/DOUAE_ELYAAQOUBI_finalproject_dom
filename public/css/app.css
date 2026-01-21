@@ -747,6 +747,86 @@ body {
     background-color: #ce1212;
 }
 
+/** CHEF */
+.chefs{
+    padding: 5vh 6vw;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 2vh;
+    
+}
+.chefs  p{
+    font-size: 15px;
+    color: #171212d5;sans-serif;
+    font-weight: 200;
+    font-size: 15px;
+    line-height: 4vh;
+    color: #5b5858;
+}
+.chefs h1 {
+    color: #ce1212;
+    font-family: 'Amatic SC', cursive;
+}
+.chefs h1 span{
+    color: #ce1212;
+    font-family: 'Amatic SC', cursive;
+}
+.contianer-chefs{
+    display: flex;
+    gap: 3vw;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+}
+.box{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+.box:hover{
+    transform: scale(1.09);
+    transition: ease-in-out 0.3s;
+}
+.item {
+    width: 100%;
+    height: 50%;
+}
+
+.item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.text-chef{
+    /* height: 50%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    gap: 2vh;
+    padding: 2vh 3vw;
+    margin-bottom: 8vh;
+}
+
+.text-chef .nameofchef{
+    font-size: 20px;
+    font-weight: bold;
+}
+.text-chef span{
+    font-size: 13px;
+    color: #171212a8;
+}
+.text-chef .paragraphe{
+    color: #171212a8;
+    font-size: 12px;
+    line-height: 5vh;
+}
 
 
 /** CAROUSEL */
@@ -1127,7 +1207,11 @@ body {
     }
 
 
-
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
+}
 
 
 /*! RESPONSIVE */
