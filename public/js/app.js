@@ -128,43 +128,43 @@
 
     //* carousel_image 
 
-//     const carousel = document.querySelector(".carouselEv");
-// const slides = document.querySelectorAll(".carouselEv .sld");
-// const dots = document.querySelectorAll(".carousel-indicators .dot");
-// const visibleSlides = 3;
-// const totalSlides = slides.length;
+    const carousel = document.querySelector(".carouselEv");
+const slides = document.querySelectorAll(".carouselEv .sld");
+const dots = document.querySelectorAll(".carousel-indicators .dot");
+const visibleSlides = 3;
+const totalSlides = slides.length;
 
-// let index = 0;
+let index = 0;
 
-// for(let i = 0; i < visibleSlides; i++){
-//     const clone = slides[i].cloneNode(true);
-//     carousel.appendChild(clone);
-// }
+for(let i = 0; i < visibleSlides; i++){
+    const clone = slides[i].cloneNode(true);
+    carousel.appendChild(clone);
+}
 
-// function updateCarousel() {
-//     const slideWidth = slides[0].offsetWidth;
-//     carousel.style.transform = `translateX(-${index * slideWidth}px)`;
+function updateCarousel() {
+    const slideWidth = slides[0].offsetWidth;
+    carousel.style.transform = `translateX(-${index * slideWidth}px)`;
     
 
-//     dots.forEach(dot => dot.classList.remove('active'));
-//     dots[index % totalSlides].classList.add('active');
-// }
+    dots.forEach(dot => dot.classList.remove('active'));
+    dots[index % totalSlides].classList.add('active');
+}
 
-// setInterval(() => {
-//     index++;
-//     updateCarousel();
+setInterval(() => {
+    index++;
+    updateCarousel();
     
     
-//     if(index >= totalSlides) {
-//         setTimeout(() => {
-//             carousel.style.transition = 'none';
-//             index = 0;
-//             updateCarousel();
-//             carousel.offsetHeight; 
-//             carousel.style.transition = 'transform 0.5s ease-in-out';
-//         }, 500);
-//     }
-// }, 3000)
+    if(index >= totalSlides) {
+        setTimeout(() => {
+            carousel.style.transition = 'none';
+            index = 0;
+            updateCarousel();
+            carousel.offsetHeight; 
+            carousel.style.transition = 'transform 0.5s ease-in-out';
+        }, 500);
+    }
+}, 3000)
 
 
 
