@@ -411,28 +411,35 @@ body {
 
 /** WHY US */
 
+
 .whyUs {
-    padding: 60px 20px;
+    padding: 15vh 5vw;
     background-color: #f2f2f2;
     font-family: Arial, sans-serif;
     color: white;
-    height: 50vh;
+    display: flex;
 }
 
 .whyUs .whyContent {
     display: flex;
-    flex-wrap: wrap;
-    gap: 40px;
-    max-width: 1200px;
-    margin: 0 auto;
+    gap: 30px;
+    /* margin: 0 auto; */
+}
+
+.whyUs .firstCard,
+.whyUs .secondCard,
+.whyUs .thirdCard,
+.whyUs .fourthCard {
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
 }
 
 .whyUs .firstCard {
-    flex: 0 0 25%; 
     background-color: #d91c1c;
     color: white;
-    padding: 40px 30px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    width: 25vw;
 }
 
 .whyUs .firstCard h3 {
@@ -463,16 +470,12 @@ body {
     background-color: rgba(255,255,255,0.35);
 }
 
-
 .whyUs .secondCard,
 .whyUs .thirdCard,
 .whyUs .fourthCard {
-    flex: 0 0 calc(65% / 4 ); 
     background-color: #fff;
-    padding: 30px 20px;
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    transition: 0.3s;
+    color: #333;
+    width: 15vw;
 }
 
 .whyUs .secondCard:hover,
@@ -503,6 +506,7 @@ body {
     color: #555;
     line-height: 1.5;
 }
+
 
 
 /* *SECTION */
@@ -957,7 +961,7 @@ body {
 
 
 
-/* SECTION */
+/** SECTION */
 .reservation-section {
     display: flex;
     background-color: #f8f8f8;
@@ -1014,7 +1018,7 @@ body {
 
 
 
-/* CONTACT SECTION */
+/** CONTACT SECTION */
     .contactSection {
     padding: 60px 0;
     background: #f7f7f7;
@@ -1045,13 +1049,13 @@ body {
     color: #ce1212;
     }
 
-    /* MAP */
+    /** MAP */
     .contactMap iframe {
     width: 100%;
     border-radius: 8px;
     }
 
-    /* CONTACT INFO */
+    /** CONTACT INFO */
     .contactForms {
     background: #fff;
     padding: 30px;
@@ -1099,7 +1103,7 @@ body {
     color: #6c757d;
     }
 
-    /* FORM */
+    /** FORM */
     .contactFormInputs {
     display: flex;
     flex-direction: column;
@@ -1136,6 +1140,8 @@ body {
     cursor: pointer;
     align-self: center;
     transition: 0.3s;
+    width: 60vw;
+    margin: 2% 10%;
     }
 
     .contactFormInputs button:hover {
@@ -1216,153 +1222,348 @@ body {
 
 /*! RESPONSIVE */
 
-/* Tablet: */
-@media (max-width: 800px) and (min-width: 449px) {
+@media (max-width: 800px) {
     body{
-        overflow: hidden;
-    }
-    .nav { 
-        white-space: 100vw;
-        gap: 10px;
-    }
-    .nav-wrap{
-        padding: 1vh 1vw;
-    }
-    .nav button{
-        width: 2vw;
-        font-size: 20px;
         margin: 0;
-        
+    }
+    .nav-wrap {
+        padding: 2vh 4vw;
+    }
+    .nav {
+        gap: 20px;
+        width: 100vw;
+    }
+    .nav a {
+        display: none;
+    }
+    .dropdown-toggle{
+        display: none;
     }
     .hero {
         flex-direction: column;
         text-align: center;
-        padding-top: 50px;
-        position: relative;
+        padding: 0 4vw;
     }
     .hero-left, .hero-right {
         width: 100%;
-        max-width: 100%;
+    }
+    .hero-left {
+        max-width: none;
+    }
+    .hero-left h1 {
+        font-size: 48px;
     }
     .hero-right {
-        position: relative;
-        top: 0;
-        right: 0;
-        height: auto;
         justify-content: center;
-        align-items: center;
-        margin-top: 20px;
+        margin-top: 30px;
     }
     .hero-right img {
-        width: 70%;
-        margin: 2vh;
+        width: 60%;
     }
-    .hero-actions {
-        justify-content: center;
-        gap: 15px;
+    .btn-video{
+        font-size: larger;
+    }
+
+    .about {
+        padding: 60px 4vw;
     }
     .about-content {
         flex-direction: column;
+        gap: 40px;
     }
-
-    .about-left,
-    .about-right {
+    .about-left, .about-right {
         width: 100%;
     }
-
+    .about-right {
+        height: auto;
+    }
     .book-box {
-        position: static;
-        margin-top: 15px;
+        width: 90%;
+        padding: 20px;
+        height: auto;
+        font-size: 18px;
+    }
+    .whyUs {
+        padding: 40px 20px;
+        height: auto;
+    }
+    .whyUs .whyContent {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .whyUs .firstCard,
+    .whyUs .secondCard,
+    .whyUs .thirdCard,
+    .whyUs .fourthCard {
+        flex: 1 1 100%;
+        width: 100%;
+    }
+    
+    .whyUs {
+        padding: 30px 10px;
+    }
+    .whyUs .firstCard,
+    .whyUs .secondCard,
+    .whyUs .thirdCard,
+    .whyUs .fourthCard {
+        padding: 20px;
+    }
+    .whyUs .firstCard h3 {
+        font-size: 24px;
+    }
+    .whyUs i {
+        font-size: 28px;
+    }
+
+    .container,.whyContent{
+        width: 90vw;
+    }
+        .states .container {
+        gap: 10vw;
+    }
+    .menu {
+        padding: 30px 20px;
+    }
+    .menu-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    .menu-item img {
+        width: 100%;
+    }
+    .testimonials {
+        padding: 6vh 4vw;
+    }
+    .carousel-testimonials {
+        width: 90%;
+    }
+    .slidee {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    .slidee .text {
+        max-width: 100%;
+        padding-left: 0;
+    }
+    .slidee .text::before {
+        display: none;
+    }
+    .chefs {
+        padding: 4vh 4vw;
+    }
+    .contianer-chefs {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .box {
+        width: 100%;
+    }
+    .reservation-section {
+        flex-direction: column;
+        margin: 4vw;
+    }
+    .reservation-section img {
+        width: 100%;
+    }
+    .reservation-form {
+        width: 100%;
+    }
+    .GRID {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .GRID textarea {
+        grid-column: span 1;
+    }
+    .book-btn {
+        margin: 20px auto;
+        width: fit-content;
+    }
+    .contactForms {
+        padding: 20px;
+    }
+    .contactInfoTop,
+    .contactInfoBottom {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .contactInfoTop > div,
+    .contactInfoBottom > div {
+        width: 100%;
+    }
+    .contactFormInputs > div:first-child {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .contactFormInputs button {
+        width: 100%;
+        margin: 20px 0;
+    }
+    .footerTop {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
     }
 }
 
-/* Mobile: */
-@media (max-width: 450px) {
-    .nav { display: none; }
-    .hero {
-        flex-direction: column;
-        text-align: center;
-        padding-top: 30px;
+
+@media (max-width: 500px) {
+    
+    .nav-wrap {
+        padding: 2vh 2vw;
+        height: auto;
     }
-    .hero-left {
-        width: 100%;
+    .logo {
+        font-size: 24px;
+    }
+    .nav {
+        display: none; 
+    }
+    .hero {
+        padding: 0 2vw;
+        min-height: 80vh;
     }
     .hero-left h1 {
         font-size: 36px;
     }
     .hero-left p {
-        font-size: 95%;
+        font-size: 100%;
+    }
+    .hero-actions {
+        flex-direction: column;
+        gap: 15px;
     }
     .btn-main, .btn-hero {
         width: 40%;
         padding: 12px 0;
-        font-size: 13px;
     }
     .btn-video {
-    background: none;
-    border: none;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    cursor: pointer;
-    font-weight: 700;
-    font-size: 4vw;
-    }
-    .play {
-        width: 30px;
-        height: 30px;
-        background: transparent;
-        color: #ce1212;
-        border: #ce1212 solid 3px;
-        border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .hero-right {
-        position: relative;
-        top: 0;
-        right: 0;
-        width: 100%;
-        margin-top: 20px;
-        justify-content: center;
-        align-items: center;
+        font-size: 4vw;
     }
     .hero-right img {
-        width: 90%;
+        width: 80%;
     }
-    .hero-actions {
-        flex-direction: column;
-        gap: 10px;
+    .about {
+        padding: 40px 2vw;
     }
-    .whyUs .whyContent {
-        flex-direction: column;
-        align-items: center;
+    .about-title h1 {
+        font-size: 36px;
     }
-
+    .book-box {
+        padding: 15px;
+        font-size: 16px;
+    }
+    .book-box span {
+        font-size: 18px;
+    }
+    .container,.whyContent{
+        width: 80vw;
+    }
+    .whyUs {
+        padding: 30px 10px;
+    }
     .whyUs .firstCard,
     .whyUs .secondCard,
     .whyUs .thirdCard,
     .whyUs .fourthCard {
-        width: 80vw;
+        padding: 20px;
     }
-    .about {
-        padding: 40px 5vw;
+    .whyUs .firstCard h3 {
+        font-size: 24px;
     }
-
-    .about-content {
-        flex-direction: column;
-        gap: 30px;
+    .whyUs i {
+        font-size: 28px;
     }
 
-    .about-left,
-    .about-right {
+    .states .container {
+        gap: 5vw;
+    }
+    .ecr h3 {
+        font-size: 32px;
+    }
+    .menu {
+        padding: 20px 10px;
+    }
+    .menu-tabs {
+        margin: 4vh 0;
+    }
+    .menu-tabs button {
+        font-size: 16px;
+        margin: 0 10px;
+    }
+    .menu-container {
+        grid-template-columns: 1fr;
+    }
+    .menu-item img {
         width: 100%;
-        height: auto;
     }
-
-    .about-right {
-        height: auto;
+    .menu-item h4 {
+        font-size: 18px;
+    }
+    .menu-item span {
+        font-size: 24px;
+    }
+    .testimonials {
+        padding: 4vh 2vw;
+    }
+    .testimonials h1 {
+        font-size: 32px;
+    }
+    .carousel-testimonials {
+        width: 95%;
+    }
+    .slidee img {
+        width: 120px;
+        height: 120px;
+    }
+    .chefs {
+        padding: 3vh 2vw;
+    }
+    .chefs h1 {
+        font-size: 32px;
+    }
+    .contianer-chefs {
+        gap: 15px;
+    }
+    .text-chef {
+        padding: 1vh 2vw;
+        margin-bottom: 4vh;
+    }
+    .text-chef .nameofchef {
+        font-size: 18px;
+    }
+    .carousel-container-event {
+        padding: 8vh 0;
+    }
+    .sld {
+        height: 60vh;
+    }
+    .textP h3 {
+        font-size: 24px;
+    }
+    .textP span {
+        font-size: 24px;
+    }
+    .ecrture h1 {
+        font-size: 36px;
+    }
+    .reservation-section {
+        margin: 2vw;
+    }
+    .contactSection {
+        padding: 40px 0;
+    }
+    .contactHeader h2 {
+        font-size: 32px;
+    }
+    .footerTop {
+        padding-bottom: 20px;
+    }
+    .footerBottom {
+        font-size: 12px;
+    }
+    .color{
+        
     }
 }
